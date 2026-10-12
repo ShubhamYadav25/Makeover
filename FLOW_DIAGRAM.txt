@@ -1,0 +1,84 @@
+Makemore End-to-End Flow
+
+TRAINING
+  Text dataset
+      |
+      v
+  Character tokenization
+      |
+      v
+  Character IDs
+      |
+      v
+  Context windows (previous 3 chars -> next char)
+      |
+      v
+  X / Y dataset
+      |
+      v
+  Train / Validation / Test split
+      |
+      v
+  Embedding lookup
+      |
+      v
+  Flatten
+      |
+      v
+  Linear + tanh
+      |
+      v
+  Output linear layer
+      |
+      v
+  Logits
+      |
+      v
+  Cross entropy
+      |
+      v
+  Loss
+      |
+      v
+  Backpropagation
+      |
+      v
+  Gradients
+      |
+      v
+  Gradient descent
+      |
+      +---------------------> repeat
+
+
+GENERATION
+  Start context: ...
+      |
+      v
+  Model
+      |
+      v
+  Logits
+      |
+      v
+  Temperature
+      |
+      v
+  Softmax
+      |
+      v
+  Sampling
+      |
+      v
+  Next character
+      |
+      v
+  Update context
+      |
+      +---------------------> repeat
+                                 |
+                                 v
+                              "." stop
+                                 |
+                                 v
+                           Generated name
